@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   
   <script>
@@ -40,6 +40,34 @@
     body{
       cursor: none;
     }
+
+
+.btn-AI {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 99;
+  font-size: 23px;
+  outline: none;
+  background-color: #da4109;
+  padding: 17px 23px;
+  animation: fadeInUp 0.7s ease-in;
+  transition: all 0.5s;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.btn-AI:hover {
+  background-color: #2b8d74;
+  bottom: 30px;
+  box-shadow: 0 0 20px 3px #7dfadb;
+}
+
+.btn-AI a {
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+}
 
     /* Custom Cursor */
     .custom-cursor {
@@ -307,7 +335,7 @@
     </a>
     <div class="dropdown-menu absolute top-full mt-2 w-48 bg-dark-blue rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0">
       <a href="kurikulumsmp.html" class="block px-5 py-3 text-white hover:bg-primary-blue rounded-t-lg">SMP</a>
-      <a href="#" class="block px-5 py-3 text-white hover:bg-primary-blue rounded-b-lg">SMK</a>
+      <a href="Akademik_Smk/index.html" class="block px-5 py-3 text-white hover:bg-primary-blue rounded-b-lg">SMK</a>
     </div>
   </div>
 
@@ -380,7 +408,7 @@
             <span>Scroll</span>
           </div>
         </div>
-        <div class="container w-full w-full mx-auto px-5 mb-10 box-border flex flex-col lg:flex-row justify-between items-center gap-[50px]">
+        <div class="container md:flex-col-reverse sm:flex-col-reverse w-full w-full mx-auto px-5 mb-10 box-border flex flex-col lg:flex-row justify-between items-center gap-[50px]">
             <div class="about-us-content flex flex-col gap-[30px] items-start flex-1 animate-slide-left">
               <div class="tag inline-flex justify-center items-center py-2 px-4 rounded-full bg-primary-blue text-white border border-white transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-[0_4px_15px_rgba(28,76,208,0.3)]">
                 <img src="images/8836_801.svg" alt="graduation cap icon" class="mr-2">
@@ -964,13 +992,13 @@
 
       <!-- Pop up Cabang IDN -->
       <section class="h-full w-full fixed top-0 left-0 flex items-center justify-center bg-black/50 z-50 hidden" id="branch-popup-backdrop">
-        <div id="Popup-jonggol" class="hidden flex-col rounded-2xl border-[3px] border-black bg-white p-5">
+        <div id="Popup-jonggol" class="hidden max-w-[500px] max-w-[500px] flex-col rounded-2xl border-[3px] bg-white p-5">
         <img src="images/idn_jonggol.png" alt="Campus of IDN Boarding School Jonggol" class="h-44 w-full rounded-xl object-cover">
         <div class="flex flex-1 flex-col justify-between pt-6">
           <div class="flex flex-col gap-6">
             <div class="flex flex-col gap-2">
               <div class="flex items-center gap-1.5">
-                <img src="images/6_66.svg" alt="Location pin" class="h-4 w-4">
+                <img src="images/6_134.svg" alt="Location pin" class="h-4 w-4">
                 <p class="text-xs font-medium text-gray-500">Jl. Raya Jonggol-Dayeuh</p>
               </div>
               <h3 class="text-xl font-semibold text-black">IDN Boarding School Jonggol</h3>
@@ -984,21 +1012,21 @@
           </div>
           <div class="mt-6 flex justify-between divide-x divide-gray-200 border-t border-gray-200 pt-6">
             <div class="flex flex-1 items-center justify-center gap-3 px-1">
-              <img src="images/6_80.svg" alt="Students icon" class="h-8 w-8">
+              <img src="images/6_114.svg" alt="Students icon" class="h-8 w-8">
               <div>
                 <p class="text-xl font-semibold text-gray-500">300+</p>
                 <p class="text-base font-medium text-gray-500">Santri</p>
               </div>
             </div>
             <div class="flex flex-1 items-center justify-center gap-3 px-1">
-              <img src="images/6_85.svg" alt="Teacher icon" class="h-8 w-8">
+              <img src="images/6_119.svg" alt="Teacher icon" class="h-8 w-8">
               <div>
                 <p class="text-xl font-semibold text-gray-500">40+</p>
                 <p class="text-base font-medium text-gray-500">Guru</p>
               </div>
             </div>
             <div class="flex flex-1 items-center justify-center gap-3 px-1">
-              <img src="images/6_90.svg" alt="Admin icon" class="h-8 w-8">
+              <img src="images/6_124.svg" alt="Admin icon" class="h-8 w-8">
               <div>
                 <p class="text-xl font-semibold text-gray-500">12+</p>
                 <p class="text-base font-medium text-gray-500">Admin</p>
@@ -1009,13 +1037,13 @@
       </div>
 
       <!-- Card 2: IDN Akhwat -->
-      <div id="Popup-akhwat" class="hidden flex-col rounded-2xl border-[3px] border-black bg-white p-5">
+      <div id="Popup-akhwat" class="hidden max-w-[500px] flex-col rounded-2xl border-[3px] bg-white p-5">
         <img src="images/idn_akhwat.png" alt="Campus of IDN Boarding School Akhwat" class="h-44 w-full rounded-xl object-cover">
         <div class="flex flex-1 flex-col justify-between pt-6">
           <div class="flex flex-col gap-6">
             <div class="flex flex-col gap-2">
               <div class="flex items-center gap-1.5">
-                <img src="images/6_100.svg" alt="Location pin" class="h-4 w-4">
+                <img src="images/6_134.svg" alt="Location pin" class="h-4 w-4">
                 <p class="text-xs font-medium text-gray-500">Jl. Raya Jonggol-Dayeuh</p>
               </div>
               <h3 class="text-xl font-semibold text-black">IDN Boarding School Akhwat</h3>
@@ -1054,7 +1082,7 @@
       </div>
 
       <!-- Card 3: IDN Pamijahan -->
-      <div id="Popup-pamijahan" class="hidden flex-col rounded-2xl border-[3px] border-black bg-white p-5">
+      <div id="Popup-pamijahan" class="hidden max-w-[500px] flex-col rounded-2xl border-[3px] bg-white p-5">
         <img src="images/idn_pamijahan.png" alt="Campus of IDN Boarding School Pamijahan" class="h-44 w-full rounded-xl object-cover">
         <div class="flex flex-1 flex-col justify-between pt-6">
           <div class="flex flex-col gap-6">
@@ -1098,13 +1126,13 @@
       </div>
 
       <!-- Card 4: IDN Solo -->
-      <div id="Popup-solo" class="hidden flex-col rounded-2xl border-[3px] border-black bg-white p-5">
+      <div id="Popup-solo" class="hidden max-w-[500px] flex-col rounded-2xl border-[3px] bg-white p-5">
         <img src="images/idn_solo.png" alt="Campus of IDN Boarding School Solo" class="h-44 w-full rounded-xl object-cover">
         <div class="flex flex-1 flex-col justify-between pt-6">
           <div class="flex flex-col gap-6">
             <div class="flex flex-col gap-2">
               <div class="flex items-center gap-1.5">
-                <img src="images/6_166.svg" alt="Location pin" class="h-4 w-4">
+                <img src="images/6_134.svg" alt="Location pin" class="h-4 w-4">
                 <p class="text-xs font-medium text-gray-500">Dusun Gondanglegi, Karanganyar</p>
               </div>
               <h3 class="text-xl font-semibold text-black">IDN Boarding School Solo</h3>
@@ -1142,13 +1170,13 @@
       </div>
 
       <!-- Card 5: IDN Sentul -->
-      <div id="Popup-sentul" class="hidden flex-col rounded-2xl border-[3px] border-black bg-white p-5">
+      <div id="Popup-sentul" class="hidden max-w-[500px] flex-col rounded-2xl border-[3px] bg-white p-5">
         <img src="images/idn_sentul.png" alt="Campus of IDN Boarding School Sentul" class="h-44 w-full rounded-xl object-cover">
         <div class="flex flex-1 flex-col justify-between pt-6">
           <div class="flex flex-col gap-6">
             <div class="flex flex-col gap-2">
               <div class="flex items-center gap-1.5">
-                <img src="images/6_198.svg" alt="Location pin" class="h-4 w-4">
+                <img src="images/6_134.svg" alt="Location pin" class="h-4 w-4">
                 <p class="text-xs font-medium text-gray-500">Central Karang, Babakan Madang</p>
               </div>
               <h3 class="text-xl font-semibold text-black">IDN Boarding School Sentul</h3>
@@ -1186,13 +1214,13 @@
       </div>
 
       <!-- Card 6: IDN Malang -->
-      <div id="Popup-malang" class="hidden flex-col rounded-2xl border-[3px] border-black bg-white p-5">
+      <div id="Popup-malang" class="hidden max-w-[500px] flex-col rounded-2xl border-[3px] bg-white p-5">
         <img src="images/idn_solo.png" alt="Campus of IDN Boarding School Malang" class="h-44 w-full rounded-xl object-cover">
         <div class="flex flex-1 flex-col justify-between pt-6">
           <div class="flex flex-col gap-6">
             <div class="flex flex-col gap-2">
               <div class="flex items-center gap-1.5">
-                <img src="images/6_230.svg" alt="Location pin" class="h-4 w-4">
+                <img src="images/6_134.svg" alt="Location pin" class="h-4 w-4">
                 <p class="text-xs font-medium text-gray-500">Dusun Ngadas, Poncokusumo</p>
               </div>
               <h3 class="text-xl font-semibold text-black">IDN Boarding School Malang</h3>
@@ -1278,6 +1306,10 @@
         </div>
       </section>
     </main>
+
+<div onclick="ai_idn()" class="btn-AI">
+      <a href="AI/ai_idn.html">AI</a>
+    </div>
 
     <footer id="footer" class="font-figtree">
       <div class="bg-dark-blue text-white py-[50px]">
