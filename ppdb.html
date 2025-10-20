@@ -1,22 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IDN Boarding School - PPDB</title>
-    <link href="./dist/output.css" rel="stylesheet" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Poppins:wght@300;600;700&display=swap"
       rel="stylesheet"
     />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
+              "primary-blue": "#1c4cd0",
+              "dark-blue": "#0e2464",
+              "light-blue": "#5879ff",
+              "text-dark": "#181d27",
+              "text-gray": "#717680",
+              "text-light": "#d5d7da",
+              "background-gray": "#f5f5f5",
+              "accent-orange": "#f59e0b",
+              "danger-red": "#d92d21",
+              // Menambahkan warna dari halaman PPDB untuk konsistensi jika diperlukan
               "brand-dark-blue": "#0e2464",
               "brand-blue": "#1c4cd0",
               "brand-gradient-from": "#0126b9",
@@ -36,85 +46,212 @@
     </script>
     <style>
       body {
-        font-family: "Figtree", sans-serif;
+        font-family: "Figtree", "sans-serif";
+      }
+      /* Custom styles from Halaman Utama for animations */
+      .main-nav a::after {
+        content: "";
+        position: absolute;
+        bottom: 8px;
+        left: 14px;
+        right: 14px;
+        height: 2px;
+        background-color: white;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+      }
+      .main-nav a:hover::after,
+      .dropdown-container:hover > a::after {
+        transform: scaleX(1);
+      }
+      .dropdown-menu {
+        will-change: opacity, transform;
+      }
+      .mobile-nav-toggle span {
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+      }
+      .mobile-nav-toggle.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      .mobile-nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+      .mobile-nav-toggle.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+      .footer-links a::before {
+        content: "→";
+        position: absolute;
+        left: -20px;
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+      .footer-links a:hover {
+        padding-left: 25px;
+      }
+      .footer-links a:hover::before {
+        left: 0;
+        opacity: 1;
       }
     </style>
   </head>
-  <body>
-    <!-- Header Section -->
-    <header id="section-header" class="bg-brand-dark-blue sticky top-0 z-50">
+  <body class="font-figtree bg-white text-text-dark overflow-x-hidden">
+    <header
+      class="main-header bg-dark-blue h-[90px] flex items-center sticky top-0 z-50 w-full transition-shadow duration-300 ease-in-out px-5 md:px-10 lg:px-[110px]"
+    >
       <div
-        class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-28 h-[90px] flex items-center justify-between"
+        class="flex justify-between items-center w-full max-w-[1220px] mx-auto"
       >
-        <!-- Logo -->
-        <a href="#">
-          <img src="./images//logo_idn.png" alt="Logo" class="h-12" />
+        <a href="index.html" class="logo">
+          <img
+            src="./images//logo_idn.png"
+            alt="IDN Boarding School Logo"
+            class="h-[50px] transition-transform duration-300 ease-in-out hover:scale-110"
+          />
         </a>
-        <!-- Navigation -->
-        <nav class="hidden md:flex items-center gap-4">
+        <nav class="main-nav hidden lg:flex items-center gap-4">
           <a
             href="index.html"
-            class="text-white font-figtree text-lg px-3.5 py-3 rounded-lg hover:bg-white/10 transition-colors"
+            class="text-white text-lg font-normal flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative hover:bg-white/10 hover:-translate-y-0.5"
             >Beranda</a
           >
           <a
             href="ppdb.html"
-            class="text-white font-figtree font-semibold text-xl px-3.5 py-3 rounded-lg hover:bg-white/10 transition-colors"
+            class="text-white text-lg font-bold flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative bg-white/10"
             >PPDB</a
           >
+
+          <div class="relative group">
+            <a
+              href="#"
+              class="text-white text-lg font-normal flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative hover:bg-white/10 hover:-translate-y-0.5"
+            >
+              Kurikulum
+              <img
+                src="images/I8931_31074_8931_30754_8039_20104.svg"
+                alt="dropdown"
+                class="w-6 h-6 transition-transform duration-300 ease-in-out group-hover:rotate-180"
+              />
+            </a>
+            <div
+              class="dropdown-menu absolute top-full mt-2 w-48 bg-dark-blue rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0"
+            >
+              <a
+                href="kurikulumsmp.html"
+                class="block px-5 py-3 text-white hover:bg-primary-blue rounded-t-lg"
+                >SMP</a
+              >
+              <a
+                href="Akademik_Smk/index.html"
+                class="block px-5 py-3 text-white hover:bg-primary-blue rounded-b-lg"
+                >SMK</a
+              >
+            </div>
+          </div>
+
+          <div class="relative group">
+            <a
+              href="#"
+              class="text-white text-lg font-normal flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative hover:bg-white/10 hover:-translate-y-0.5"
+            >
+              Program
+              <img
+                src="images/I8931_31074_8931_30755_8039_20104.svg"
+                alt="dropdown"
+                class="w-6 h-6 transition-transform duration-300 ease-in-out group-hover:rotate-180"
+              />
+            </a>
+            <div
+              class="dropdown-menu absolute top-full mt-2 w-56 bg-dark-blue rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0"
+            >
+              <a
+                href="#"
+                class="block px-5 py-3 text-white hover:bg-primary-blue rounded-t-lg"
+                >Backpacker</a
+              >
+              <a href="#" class="block px-5 py-3 text-white hover:bg-primary-blue"
+                >Ekstrakurikuler</a
+              >
+              <a href="#" class="block px-5 py-3 text-white hover:bg-primary-blue"
+                >Internasional</a
+              >
+              <a href="#" class="block px-5 py-3 text-white hover:bg-primary-blue"
+                >IDN Mengajar</a
+              >
+              <a href="#" class="block px-5 py-3 text-white hover:bg-primary-blue"
+                >Live In</a
+              >
+              <a href="#" class="block px-5 py-3 text-white hover:bg-primary-blue"
+                >Business Survival</a
+              >
+              <a href="#" class="block px-5 py-3 text-white hover:bg-primary-blue"
+                >Edurace</a
+              >
+              <a href="#" class="block px-5 py-3 text-white hover:bg-primary-blue"
+                >IDN Bersyukur</a
+              >
+              <a href="#" class="block px-5 py-3 text-white hover:bg-primary-blue"
+                >LDKS</a
+              >
+              <a
+                href="#"
+                class="block px-5 py-3 text-white hover:bg-primary-blue rounded-b-lg"
+                >IT Camp</a
+              >
+            </div>
+          </div>
+
           <a
-            href="kurikulumsmp.html"
-            class="text-white font-figtree text-lg px-3.5 py-3 rounded-lg hover:bg-white/10 transition-colors flex items-center gap-2"
-          >
-            Kurikulum
-            <img
-              src="./images//I8941_12423_8931_30799_8039_20104.svg"
-              alt="dropdown icon"
-              class="w-6 h-6"
-            />
-          </a>
-          <a
-            href="#"
-            class="text-white font-figtree text-lg px-3.5 py-3 rounded-lg hover:bg-white/10 transition-colors flex items-center gap-2"
-          >
-            Program
-            <img
-              src="./images//I8941_12423_8931_30800_8039_20104.svg"
-              alt="dropdown icon"
-              class="w-6 h-6"
-            />
-          </a>
-          <a
-            href="#"
-            class="text-white font-figtree text-lg px-3.5 py-3 rounded-lg hover:bg-white/10 transition-colors"
+            href="artikel/index.html"
+            class="text-white text-lg font-normal flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative hover:bg-white/10 hover:-translate-y-0.5"
             >Artikel</a
           >
           <a
-            href="#"
-            class="text-white font-figtree text-lg px-3.5 py-3 rounded-lg hover:bg-white/10 transition-colors"
+            href="https://api.whatsapp.com/send?phone=6282116653328"
+            target="_blank"
+            class="text-white text-lg font-normal flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative hover:bg-white/10 hover:-translate-y-0.5"
             >Kontak</a
           >
         </nav>
-        <!-- Mobile menu button -->
-        <button class="md:hidden text-white">
-          <svg
-            class="w-8 h-8"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            ></path>
-          </svg>
+        <button
+          class="mobile-nav-toggle block lg:hidden bg-none border-none cursor-pointer z-50"
+        >
+          <span class="block w-[25px] h-[3px] bg-white my-[5px]"></span>
+          <span class="block w-[25px] h-[3px] bg-white my-[5px]"></span>
+          <span class="block w-[25px] h-[3px] bg-white my-[5px]"></span>
         </button>
       </div>
     </header>
-    <!-- Hero Section -->
+
+    <div
+      id="mobile-menu"
+      class="fixed top-0 left-0 w-full h-full bg-dark-blue/95 backdrop-blur-sm z-40 flex items-center justify-center opacity-0 invisible transition-all duration-500 -translate-x-full"
+    >
+      <nav class="flex flex-col items-center gap-8 text-center">
+        <a href="index.html" class="mobile-link text-white text-3xl font-bold"
+          >Beranda</a
+        >
+        <a href="ppdb.html" class="mobile-link text-white text-3xl font-bold"
+          >PPDB</a
+        >
+        <a href="kurikulumsmp.html" class="mobile-link text-white text-3xl font-bold"
+          >Kurikulum</a
+        >
+        <a href="#" class="mobile-link text-white text-3xl font-bold"
+          >Program</a
+        >
+        <a href="artikel/index.html" class="mobile-link text-white text-3xl font-bold"
+          >Artikel</a
+        >
+        <a
+          href="https://api.whatsapp.com/send?phone=6282116653328"
+          target="_blank"
+          class="mobile-link text-white text-3xl font-bold"
+          >Kontak</a
+        >
+      </nav>
+    </div>
+
     <section
       id="section-hero"
       class="bg-gradient-to-r from-brand-gradient-from to-brand-gradient-to py-32"
@@ -141,7 +278,9 @@
             Ayo daftar segera, ini saatnya anda menjadi bagian keluarga besar
             IDN!
           </p>
-          <div class="flex items-center gap-4 justify-center lg:justify-start">
+          <div
+            class="flex items-center gap-4 justify-center lg:justify-start"
+          >
             <a
               href="#"
               class="bg-white text-brand-blue border-2 border-brand-blue font-semibold px-6 py-4 rounded-xl flex items-center gap-2.5 hover:bg-gray-100 transition-colors"
@@ -168,14 +307,15 @@
         </div>
       </div>
     </section>
-    <!-- Administrative Requirements Section -->
     <section id="section-requirements" class="py-24 bg-white relative">
       <img
         src="./images//8949_13511.svg"
         alt="background pattern"
         class="absolute top-0 left-0 w-full h-auto -z-10"
       />
-      <div class="max-w-6xl mx-auto px-4 flex flex-col items-center gap-16">
+      <div
+        class="max-w-6xl mx-auto px-4 flex flex-col items-center gap-16"
+      >
         <div
           class="bg-brand-blue text-white font-figtree font-semibold text-3xl py-2 px-6 rounded-lg shadow-lg flex items-center gap-3"
         >
@@ -186,7 +326,9 @@
           />
           <span>Persyaratan Administrasi</span>
         </div>
-        <div class="grid lg:grid-cols-2 gap-16 lg:gap-32 items-center w-full">
+        <div
+          class="grid lg:grid-cols-2 gap-16 lg:gap-32 items-center w-full"
+        >
           <div class="flex justify-center">
             <img
               src="./images//8949_13007.svg"
@@ -215,9 +357,10 @@
         </div>
       </div>
     </section>
-    <!-- Education Fees Section -->
     <section id="section-fees" class="py-24 bg-white">
-      <div class="max-w-6xl mx-auto px-4 flex flex-col items-center gap-16">
+      <div
+        class="max-w-6xl mx-auto px-4 flex flex-col items-center gap-16"
+      >
         <div
           class="bg-brand-blue text-white font-figtree font-semibold text-3xl py-2 px-6 rounded-lg shadow-lg flex items-center gap-3"
         >
@@ -229,8 +372,9 @@
           <span>Biaya Pendidikan</span>
         </div>
         <div class="w-full flex flex-col gap-8">
-          <!-- Fee Card 1 -->
-          <div class="bg-white rounded-2xl shadow-lg p-5 flex flex-col gap-4">
+          <div
+            class="bg-white rounded-2xl shadow-lg p-5 flex flex-col gap-4"
+          >
             <div class="flex items-baseline gap-2">
               <span class="text-4xl font-bold text-blue-500">900rb</span>
               <span class="text-sm font-medium text-brand-muted"
@@ -247,8 +391,9 @@
               </p>
             </div>
           </div>
-          <!-- Fee Card 2 -->
-          <div class="bg-white rounded-2xl shadow-lg p-5 flex flex-col gap-4">
+          <div
+            class="bg-white rounded-2xl shadow-lg p-5 flex flex-col gap-4"
+          >
             <div class="flex items-baseline gap-2">
               <span class="text-4xl font-bold text-blue-500">40jt</span>
               <span class="text-sm font-medium text-brand-muted"
@@ -275,8 +420,9 @@
               </ul>
             </div>
           </div>
-          <!-- Fee Card 3 -->
-          <div class="bg-white rounded-2xl shadow-lg p-5 flex flex-col gap-4">
+          <div
+            class="bg-white rounded-2xl shadow-lg p-5 flex flex-col gap-4"
+          >
             <div class="flex items-baseline gap-2">
               <span class="text-4xl font-bold text-blue-500">4jt</span>
               <span class="text-sm font-medium text-brand-muted"
@@ -296,8 +442,9 @@
               </p>
             </div>
           </div>
-          <!-- Fee Card 4 -->
-          <div class="bg-white rounded-2xl shadow-lg p-5 flex flex-col gap-4">
+          <div
+            class="bg-white rounded-2xl shadow-lg p-5 flex flex-col gap-4"
+          >
             <div class="flex items-baseline gap-2">
               <span class="text-4xl font-bold text-blue-500">4jt</span>
               <span class="text-sm font-medium text-brand-muted"
@@ -335,14 +482,15 @@
         </div>
       </div>
     </section>
-    <!-- Branch Uniqueness Section -->
     <section id="section-branches" class="py-24 bg-white relative">
       <img
         src="./images//8951_43170.svg"
         alt="background pattern"
         class="absolute top-0 left-0 w-full h-auto -z-10"
       />
-      <div class="max-w-6xl mx-auto px-4 flex flex-col items-center gap-12">
+      <div
+        class="max-w-6xl mx-auto px-4 flex flex-col items-center gap-12"
+      >
         <div class="text-center flex flex-col items-center gap-8">
           <div
             class="bg-brand-blue text-white font-figtree font-semibold text-3xl py-2 px-6 rounded-lg shadow-lg flex items-center gap-3"
@@ -413,45 +561,57 @@
               class="rounded-2xl w-full h-full object-cover"
             />
             <div class="flex flex-col gap-6 p-2">
-              <h3 class="text-2xl font-semibold text-gray-900 text-center">
+              <h3
+                class="text-2xl font-semibold text-gray-900 text-center"
+              >
                 Keunikan IDN Jonggol
               </h3>
               <ul class="space-y-4">
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9071_936.svg" class="w-7 h-7" />Pusat dari
-                  seluruh Cabang
+                  <img src="./images//9071_936.svg" class="w-7 h-7" />Pusat
+                  dari seluruh Cabang
                 </li>
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9151_965.svg" class="w-7 h-7" />Lapangan
-                  Futsal
+                  <img
+                    src="./images//9151_965.svg"
+                    class="w-7 h-7"
+                  />Lapangan Futsal
                 </li>
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9071_942.svg" class="w-7 h-7" />Lapangan
-                  Basket
+                  <img
+                    src="./images//9071_942.svg"
+                    class="w-7 h-7"
+                  />Lapangan Basket
                 </li>
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9071_946.svg" class="w-7 h-7" />Lapangan
-                  Badminton
+                  <img
+                    src="./images//9071_946.svg"
+                    class="w-7 h-7"
+                  />Lapangan Badminton
                 </li>
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9071_950.svg" class="w-7 h-7" />Gedung
-                  Sekolah
+                  <img
+                    src="./images//9071_950.svg"
+                    class="w-7 h-7"
+                  />Gedung Sekolah
                 </li>
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9071_954.svg" class="w-7 h-7" />Gedung
-                  Asrama
+                  <img
+                    src="./images//9071_954.svg"
+                    class="w-7 h-7"
+                  />Gedung Asrama
                 </li>
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
@@ -469,7 +629,10 @@
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9151_957.svg" class="w-7 h-7" />Sungai
+                  <img
+                    src="./images//9151_957.svg"
+                    class="w-7 h-7"
+                  />Sungai
                 </li>
               </ul>
             </div>
@@ -485,44 +648,65 @@
               class="rounded-2xl w-full h-full object-cover"
             />
             <div class="flex flex-col gap-6 p-2">
-              <h3 class="text-2xl font-semibold text-gray-900 text-center">
+              <h3
+                class="text-2xl font-semibold text-gray-900 text-center"
+              >
                 Keunikan IDN Akhwat
               </h3>
               <ul class="space-y-4">
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9071_936.svg" class="w-7 h-7" />Khusus Akhwat
+                  <img src="./images//9071_936.svg" class="w-7 h-7" />Khusus
+                  Akhwat
                 </li>
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9151_965.svg" class="w-7 h-7" />Kolam Renang
+                  <img
+                    src="./images//9151_965.svg"
+                    class="w-7 h-7"
+                  />Kolam Renang
                 </li>
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9071_942.svg" class="w-7 h-7" />Lapangan Serbaguna
+                  <img
+                    src="./images//9071_942.svg"
+                    class="w-7 h-7"
+                  />Lapangan Serbaguna
                 </li>
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9148_949.svg" class="w-7 h-7" />Gedung Sekolah
+                  <img
+                    src="./images//9148_949.svg"
+                    class="w-7 h-7"
+                  />Gedung Sekolah
                 </li>
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9148_949.svg" class="w-7 h-7" />Gedung Asrama
+                  <img
+                    src="./images//9148_949.svg"
+                    class="w-7 h-7"
+                  />Gedung Asrama
                 </li>
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9148_949.svg" class="w-7 h-7" />Pemandangan Alam
+                  <img
+                    src="./images//9148_949.svg"
+                    class="w-7 h-7"
+                  />Pemandangan Alam
                 </li>
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9148_949.svg" class="w-7 h-7" />Sungai
+                  <img
+                    src="./images//9148_949.svg"
+                    class="w-7 h-7"
+                  />Sungai
                 </li>
               </ul>
             </div>
@@ -538,27 +722,35 @@
               class="rounded-2xl w-full h-full object-cover"
             />
             <div class="flex flex-col gap-6 p-2">
-              <h3 class="text-2xl font-semibold text-gray-900 text-center">
+              <h3
+                class="text-2xl font-semibold text-gray-900 text-center"
+              >
                 Keunikan IDN Pamijahan
               </h3>
               <ul class="space-y-4">
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9148_949.svg" class="w-7 h-7" />Suasana
-                  Pedesaan Asri
+                  <img
+                    src="./images//9148_949.svg"
+                    class="w-7 h-7"
+                  />Suasana Pedesaan Asri
                 </li>
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9071_950.svg" class="w-7 h-7" />Fokus pada
-                  Tahfidz Al-Qur'an
+                  <img
+                    src="./images//9071_950.svg"
+                    class="w-7 h-7"
+                  />Fokus pada Tahfidz Al-Qur'an
                 </li>
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9151_957.svg" class="w-7 h-7" />Dekat
-                  dengan Alam
+                  <img
+                    src="./images//9151_957.svg"
+                    class="w-7 h-7"
+                  />Dekat dengan Alam
                 </li>
               </ul>
             </div>
@@ -574,27 +766,35 @@
               class="rounded-2xl w-full h-full object-cover"
             />
             <div class="flex flex-col gap-6 p-2">
-              <h3 class="text-2xl font-semibold text-gray-900 text-center">
+              <h3
+                class="text-2xl font-semibold text-gray-900 text-center"
+              >
                 Keunikan IDN Solo
               </h3>
               <ul class="space-y-4">
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9071_936.svg" class="w-7 h-7" />Akses
-                  Mudah di Pusat Kota
+                  <img
+                    src="./images//9071_936.svg"
+                    class="w-7 h-7"
+                  />Akses Mudah di Pusat Kota
                 </li>
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9151_965.svg" class="w-7 h-7" />Kurikulum
-                  Berbasis Teknologi
+                  <img
+                    src="./images//9151_965.svg"
+                    class="w-7 h-7"
+                  />Kurikulum Berbasis Teknologi
                 </li>
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9151_989.svg" class="w-7 h-7" />Kolaborasi
-                  dengan Industri Lokal
+                  <img
+                    src="./images//9151_989.svg"
+                    class="w-7 h-7"
+                  />Kolaborasi dengan Industri Lokal
                 </li>
               </ul>
             </div>
@@ -610,7 +810,9 @@
               class="rounded-2xl w-full h-full object-cover"
             />
             <div class="flex flex-col gap-6 p-2">
-              <h3 class="text-2xl font-semibold text-gray-900 text-center">
+              <h3
+                class="text-2xl font-semibold text-gray-900 text-center"
+              >
                 Keunikan IDN Sentul
               </h3>
               <ul class="space-y-4">
@@ -625,14 +827,18 @@
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9071_950.svg" class="w-7 h-7" />Fasilitas
-                  Olahraga Lengkap
+                  <img
+                    src="./images//9071_950.svg"
+                    class="w-7 h-7"
+                  />Fasilitas Olahraga Lengkap
                 </li>
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9071_946.svg" class="w-7 h-7" />Program
-                  Pengembangan Diri
+                  <img
+                    src="./images//9071_946.svg"
+                    class="w-7 h-7"
+                  />Program Pengembangan Diri
                 </li>
               </ul>
             </div>
@@ -648,27 +854,35 @@
               class="rounded-2xl w-full h-full object-cover"
             />
             <div class="flex flex-col gap-6 p-2">
-              <h3 class="text-2xl font-semibold text-gray-900 text-center">
+              <h3
+                class="text-2xl font-semibold text-gray-900 text-center"
+              >
                 Keunikan IDN Malang
               </h3>
               <ul class="space-y-4">
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9148_949.svg" class="w-7 h-7" />Udara
-                  Sejuk & Pemandangan Gunung
+                  <img
+                    src="./images//9148_949.svg"
+                    class="w-7 h-7"
+                  />Udara Sejuk & Pemandangan Gunung
                 </li>
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9151_957.svg" class="w-7 h-7" />Kegiatan
-                  Outdoor & Alam
+                  <img
+                    src="./images//9151_957.svg"
+                    class="w-7 h-7"
+                  />Kegiatan Outdoor & Alam
                 </li>
                 <li
                   class="flex items-center gap-4 text-xl font-medium text-brand-muted"
                 >
-                  <img src="./images//9071_942.svg" class="w-7 h-7" />Fokus pada
-                  Wirausaha
+                  <img
+                    src="./images//9071_942.svg"
+                    class="w-7 h-7"
+                  />Fokus pada Wirausaha
                 </li>
               </ul>
             </div>
@@ -676,9 +890,10 @@
         </div>
       </div>
     </section>
-    <!-- Registration Flow Section -->
     <section id="section-timeline" class="py-24 bg-white">
-      <div class="max-w-6xl mx-auto px-4 flex flex-col items-center gap-16">
+      <div
+        class="max-w-6xl mx-auto px-4 flex flex-col items-center gap-16"
+      >
         <div
           class="bg-brand-blue text-white font-figtree font-semibold text-3xl py-2 px-6 rounded-lg shadow-lg flex items-center gap-3"
         >
@@ -689,7 +904,9 @@
           />
           <span>Alur Pendaftaran Santri Baru</span>
         </div>
-        <div class="grid lg:grid-cols-2 gap-16 lg:gap-32 items-center w-full">
+        <div
+          class="grid lg:grid-cols-2 gap-16 lg:gap-32 items-center w-full"
+        >
           <div class="space-y-4">
             <div
               class="bg-white rounded-xl shadow-lg p-4 flex justify-between items-center cursor-pointer"
@@ -762,12 +979,13 @@
         </div>
       </div>
     </section>
-    <!-- Final CTA Section -->
     <section id="section-cta" class="py-24 bg-white">
       <div
         class="max-w-4xl mx-auto px-4 text-center flex flex-col items-center gap-8"
       >
-        <h2 class="font-poppins font-bold text-4xl md:text-5xl text-brand-blue">
+        <h2
+          class="font-poppins font-bold text-4xl md:text-5xl text-brand-blue"
+        >
           Ayo Daftarkan Sekarang Juga!
         </h2>
         <a
@@ -783,7 +1001,6 @@
         </a>
       </div>
     </section>
-    <!-- Location Map Section -->
     <section
       id="section-location"
       class="bg-gradient-to-r from-brand-gradient-from to-brand-gradient-to py-24"
@@ -799,101 +1016,201 @@
         />
       </div>
     </section>
-    <!-- Footer Section -->
-    <footer id="section-footer" class="bg-brand-dark-blue text-white">
-      <div class="max-w-6xl mx-auto px-4 py-16">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          <!-- About -->
-          <div class="space-y-6">
-            <img src="./images//8941_12034.svg" alt="Logo" class="h-20" />
-            <p class="text-base font-medium">
+
+    <footer id="footer" class="font-figtree">
+      <div class="bg-dark-blue text-white py-[50px]">
+        <div
+          class="container w-full max-w-[1220px] mx-auto px-5 box-border flex flex-col lg:flex-row justify-between gap-[60px]"
+        >
+          <div
+            class="max-w-[360px] flex flex-col gap-[30px] items-start"
+          >
+            <img
+              src="images/logo_idn.png"
+              alt="IDN Boarding School Logo"
+              class="h-[81px] transition-transform duration-300 ease-in-out hover:scale-110"
+            />
+            <p class="text-base leading-6 font-medium">
               lembaga pendidikan berbasis IT yang memandang pendidikan sebagai
               investasi terbaik dalam kehidupan manusia, karena melalui
               pendidikan, kita dapat membangun karakter dan peradaban yang lebih
               maju.
             </p>
-            <div class="flex items-center gap-6">
-              <a href="#" class="hover:opacity-75"
+            <div class="flex gap-6">
+              <a
+                href="https://www.instagram.com/idnboardingschool/"
+                target="_blank"
+                class="transition-transform duration-300 ease-in-out hover:-translate-y-1"
                 ><img
-                  src="./images//8941_12039.svg"
+                  src="images/8836_1040.svg"
                   alt="Instagram"
-                  class="w-7 h-7"
+                  class="w-[30px] h-[30px]"
               /></a>
-              <a href="#" class="hover:opacity-75"
+              <a
+                href="https://api.whatsapp.com/send?phone=6281216653328"
+                target="_blank"
+                class="transition-transform duration-300 ease-in-out hover:-translate-y-1"
                 ><img
-                  src="./images//8941_12040.svg"
+                  src="images/8836_1041.svg"
                   alt="WhatsApp"
-                  class="w-7 h-7"
+                  class="w-[30px] h-[30px]"
               /></a>
-              <a href="#" class="hover:opacity-75"
+              <a
+                href="https://www.facebook.com/idnboardingschool/?locale=id_ID"
+                target="_blank"
+                class="transition-transform duration-300 ease-in-out hover:-translate-y-1"
                 ><img
-                  src="./images//8941_12041.svg"
+                  src="images/8836_1042.svg"
                   alt="Facebook"
-                  class="w-7 h-7"
+                  class="w-[30px] h-[30px]"
               /></a>
-              <a href="#" class="hover:opacity-75"
+              <a
+                href="https://www.youtube.com/@IDNTV2022"
+                class="transition-transform duration-300 ease-in-out hover:-translate-y-1"
                 ><img
-                  src="./images//8941_12042.svg"
+                  src="images/8836_1043.svg"
                   alt="YouTube"
-                  class="w-7 h-7"
+                  class="w-[30px] h-[30px]"
               /></a>
             </div>
           </div>
-          <!-- Links 1 -->
-          <div class="space-y-3">
-            <a href="#" class="block text-xl hover:underline">Beranda</a>
-            <a href="#" class="block text-xl hover:underline">Akademik SMK</a>
-            <a href="#" class="block text-xl hover:underline">Akademik SMP</a>
-            <a href="#" class="block text-xl hover:underline"
-              >Ekstrakurikuler</a
-            >
-            <a href="#" class="block text-xl hover:underline"
-              >Program Internasional</a
-            >
-            <a href="#" class="block text-xl hover:underline">Backpacker</a>
-            <a href="#" class="block text-xl hover:underline">IDN Mengajar</a>
-            <a href="#" class="block text-xl hover:underline">Live In</a>
-          </div>
-          <!-- Links 2 -->
-          <div class="space-y-3">
-            <a href="#" class="block text-xl hover:underline">Susur Goa</a>
-            <a href="#" class="block text-xl hover:underline"
-              >Business Survival</a
-            >
-            <a href="#" class="block text-xl hover:underline">Edurace</a>
-            <a href="#" class="block text-xl hover:underline">IDN Bersyukur</a>
-            <a href="#" class="block text-xl hover:underline">LDKS</a>
-            <a href="#" class="block text-xl hover:underline">IT Camp</a>
-            <a href="#" class="block text-xl hover:underline">Artikel</a>
-            <a href="#" class="block text-xl hover:underline">Kontak</a>
+          <div
+            class="footer-links flex flex-col md:flex-row gap-[30px] md:gap-[60px]"
+          >
+            <nav class="flex flex-col gap-3">
+              <a
+                href="#"
+                class="text-xl leading-7 font-normal transition-all duration-300 ease-in-out relative hover:text-accent-orange"
+                >PPDB</a
+              >
+              <a
+                href="#"
+                class="text-xl leading-7 font-normal transition-all duration-300 ease-in-out relative hover:text-accent-orange"
+                >Akademik SMK</a
+              >
+              <a
+                href="#"
+                class="text-xl leading-7 font-normal transition-all duration-300 ease-in-out relative hover:text-accent-orange"
+                >Akademik SMP</a
+              >
+              <a
+                href="#"
+                class="text-xl leading-7 font-normal transition-all duration-300 ease-in-out relative hover:text-accent-orange"
+                >Ekstrakurikuler</a
+              >
+              <a
+                href="#"
+                class="text-xl leading-7 font-normal transition-all duration-300 ease-in-out relative hover:text-accent-orange"
+                >Program Internasional</a
+              >
+              <a
+                href="#"
+                class="text-xl leading-7 font-normal transition-all duration-300 ease-in-out relative hover:text-accent-orange"
+                >Backpacker</a
+              >
+              <a
+                href="#"
+                class="text-xl leading-7 font-normal transition-all duration-300 ease-in-out relative hover:text-accent-orange"
+                >IDN Mengajar</a
+              >
+              <a
+                href="#"
+                class="text-xl leading-7 font-normal transition-all duration-300 ease-in-out relative hover:text-accent-orange"
+                >Live In</a
+              >
+            </nav>
+            <nav class="flex flex-col gap-3">
+              <a
+                href="#"
+                class="text-xl leading-7 font-normal transition-all duration-300 ease-in-out relative hover:text-accent-orange"
+                >Susur Goa</a
+              >
+              <a
+                href="#"
+                class="text-xl leading-7 font-normal transition-all duration-300 ease-in-out relative hover:text-accent-orange"
+                >Business Survival</a
+              >
+              <a
+                href="#"
+                class="text-xl leading-7 font-normal transition-all duration-300 ease-in-out relative hover:text-accent-orange"
+                >Edurace</a
+              >
+              <a
+                href="#"
+                class="text-xl leading-7 font-normal transition-all duration-300 ease-in-out relative hover:text-accent-orange"
+                >IDN Bersyukur</a
+              >
+              <a
+                href="#"
+                class="text-xl leading-7 font-normal transition-all duration-300 ease-in-out relative hover:text-accent-orange"
+                >LDKS</a
+              >
+              <a
+                href="#"
+                class="text-xl leading-7 font-normal transition-all duration-300 ease-in-out relative hover:text-accent-orange"
+                >IT Camp</a
+              >
+              <a
+                href="#"
+                class="text-xl leading-7 font-normal transition-all duration-300 ease-in-out relative hover:text-accent-orange"
+                >Artikel</a
+              >
+              <a
+                href="https://api.whatsapp.com/send?phone=6282116653328"
+                target="_blank"
+                class="text-xl leading-7 font-normal transition-all duration-300 ease-in-out relative hover:text-accent-orange"
+                >Kontak</a
+              >
+            </nav>
           </div>
         </div>
       </div>
-      <div class="bg-white py-4">
+      <div class="bg-white py-2.5">
         <div
-          class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-center md:justify-between items-center gap-4"
+          class="container w-full max-w-[1220px] mx-auto px-5 box-border flex flex-col md:flex-row justify-between items-center gap-5"
         >
-          <p class="text-sm text-gray-500 font-light font-poppins text-center">
+          <p class="font-poppins text-sm text-[#535353] font-light">
             © Copyright 2025 -
-            <span class="font-semibold text-blue-500">IDN Boarding School</span>
+            <strong class="font-semibold text-blue-500"
+              >IDN Boarding School</strong
+            >
           </p>
-          <img
-            src="./images//ffecd549aa88dc49a489fe3dc820951c05e9be50.png"
-            alt="Sponsor logos"
-            class="h-10"
-          />
+          <div class="flex items-center gap-4">
+            <img
+              src="images/016698a76ad9a32430b855f5b14e67f975aa7f1d.png"
+              alt="Partner Logo 1"
+              class="h-[41px] object-contain"
+            />
+            <img
+              src="images/ff4dd3f58988e9c84b9bb141610e22b15ccd7517.png"
+              alt="Partner Logo 2"
+              class="h-[41px] object-contain"
+            />
+            <img
+              src="images/7aa61f391f8a3e5ee44b96311384f438a35fda38.png"
+              alt="Partner Logo 3"
+              class="h-[41px] object-contain"
+            />
+            <img
+              src="images/afa19fa50240996d441fda41861cd78ab62d92c7.png"
+              alt="Partner Logo 4"
+              class="h-[41px] object-contain"
+            />
+          </div>
         </div>
       </div>
     </footer>
 
     <script>
+      // --- SCRIPT GABUNGAN UNTUK PPDB.HTML ---
+
+      // 1. Script untuk Tab "Keunikan Cabang" (dari PPDB.html asli)
       document.addEventListener("DOMContentLoaded", function () {
         const tabs = document.querySelectorAll(".tab-button");
         const tabContents = document.querySelectorAll(".tab-content");
 
         tabs.forEach((tab) => {
           tab.addEventListener("click", () => {
-            // Remove active classes from all tabs and hide all content
             tabs.forEach((item) => {
               item.classList.remove(
                 "border",
@@ -906,11 +1223,40 @@
               content.classList.add("hidden");
             });
 
-            // Add active classes to the clicked tab and show its content
             tab.classList.add("border", "border-brand-blue", "text-gray-900");
             tab.classList.remove("text-brand-muted");
             document.getElementById(tab.dataset.tab).classList.remove("hidden");
           });
+        });
+      });
+
+      // 2. Script untuk Mobile Menu & Dropdown (dari Halaman Utama)
+      const mobileNavToggle = document.querySelector(".mobile-nav-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+
+      const toggleMenu = () => {
+        mobileNavToggle.classList.toggle("active");
+        const isMenuOpen = mobileNavToggle.classList.contains("active");
+
+        if (isMenuOpen) {
+          mobileMenu.classList.remove("invisible", "-translate-x-full");
+          mobileMenu.classList.add("visible", "translate-x-0", "opacity-100");
+          document.body.style.overflow = "hidden";
+        } else {
+          mobileMenu.classList.remove("visible", "translate-x-0", "opacity-100");
+          mobileMenu.classList.add("invisible", "-translate-x-full");
+          document.body.style.overflow = "";
+        }
+      };
+
+      mobileNavToggle.addEventListener("click", toggleMenu);
+
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          if (mobileNavToggle.classList.contains("active")) {
+            toggleMenu();
+          }
         });
       });
     </script>

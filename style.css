@@ -3,6 +3,34 @@
       cursor: none;
     }
 
+
+.btn-AI {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 99;
+  font-size: 23px;
+  outline: none;
+  background-color: #da4109;
+  padding: 17px 23px;
+  animation: fadeInUp 0.7s ease-in;
+  transition: all 0.5s;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.btn-AI:hover {
+  background-color: #2b8d74;
+  bottom: 30px;
+  box-shadow: 0 0 20px 3px #7dfadb;
+}
+
+.btn-AI a {
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+}
+
     /* Custom Cursor */
     .custom-cursor {
       width: 40px;
@@ -73,6 +101,7 @@
 
     .btn:hover::before { width: 300px; height: 300px; }
 
+
     /* Header Nav Link Underline Effect */
     .main-nav a::after {
       content: '';
@@ -114,6 +143,39 @@
         right: 130px;
         animation: float 6s ease-in-out infinite 3s; 
     }
+
+    .dropdown-menu {
+  will-change: opacity, transform;
+}
+
+.main-nav a::after, .dropdown-container > a::after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  left: 14px;
+  right: 14px;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.main-nav a:hover::after, .dropdown-container:hover > a::after { 
+  transform: scaleX(1); 
+}
+
+.mobile-nav-toggle span {
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+.mobile-nav-toggle.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.mobile-nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.mobile-nav-toggle.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
 
     /* Hero Title Glow Animation */
     @keyframes titleGlow {

@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- <script src="script.js" defer></script> -->
   
   <script>
     tailwind.config = {
@@ -42,32 +43,7 @@
     }
 
 
-.btn-AI {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  z-index: 99;
-  font-size: 23px;
-  outline: none;
-  background-color: #da4109;
-  padding: 17px 23px;
-  animation: fadeInUp 0.7s ease-in;
-  transition: all 0.5s;
-  cursor: pointer;
-  border-radius: 50%;
-}
 
-.btn-AI:hover {
-  background-color: #2b8d74;
-  bottom: 30px;
-  box-shadow: 0 0 20px 3px #7dfadb;
-}
-
-.btn-AI a {
-  text-decoration: none;
-  font-weight: 600;
-  color: white;
-}
 
     /* Custom Cursor */
     .custom-cursor {
@@ -326,7 +302,7 @@
         </a>
         <nav class="main-nav hidden lg:flex items-center gap-4">
   <a href="#hero-about" class="text-white text-lg font-bold flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative hover:bg-white/10 hover:-translate-y-0.5">Beranda</a>
-  <a href="#registration" class="text-white text-lg font-normal flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative hover:bg-white/10 hover:-translate-y-0.5">PPDB</a>
+  <a href="ppdb.html" class="text-white text-lg font-normal flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative hover:bg-white/10 hover:-translate-y-0.5">PPDB</a>
   
   <div class="relative group">
     <a href="#majors" class="text-white text-lg font-normal flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative hover:bg-white/10 hover:-translate-y-0.5">
@@ -372,13 +348,13 @@
     <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-dark-blue/95 backdrop-blur-sm z-40 flex items-center justify-center opacity-0 invisible transition-all duration-500 -translate-x-full">
     <nav class="flex flex-col items-center gap-8 text-center">
         <a href="#hero-about" class="mobile-link text-white text-3xl font-bold">Beranda</a>
-        <a href="#registration" class="mobile-link text-white text-3xl font-bold">PPDB</a>
+        <a href="ppdb.html" class="mobile-link text-white text-3xl font-bold">PPDB</a>
         <a href="#majors" class="mobile-link text-white text-3xl font-bold">Kurikulum</a>
         <a href="#projects" class="mobile-link text-white text-3xl font-bold">Program</a>
         <a href="artikel/index.html" class="mobile-link text-white text-3xl font-bold">Artikel</a>
         <a href="https://api.whatsapp.com/send?phone=6282116653328" target="_blank" class="mobile-link text-white text-3xl font-bold">Kontak</a>
     </nav>
-</div>
+    </div>
 
     <main>
       <section id="hero-about" class="relative overflow-hidden bg-gradient-to-br from-[#0025ba] to-[#5879ff] text-white pt-16 pb-10 flex flex-col items-center">
@@ -1307,9 +1283,9 @@
       </section>
     </main>
 
-<div onclick="ai_idn()" class="btn-AI">
-      <a href="AI/ai_idn.html">AI</a>
-    </div>
+<div id="AI-btn" class="fixed bottom-5 left-5 z-[99] cursor-pointer rounded-full bg-[#da4109] py-5 px-6 outline-none transition-all duration-500 animate-fadeInUp hover:bottom-7 hover:bg-[#2b8d74] hover:shadow-[0_0_20px_3px_#7dfadb]">
+    <a href="AI/ai_idn.html" class="text-2xl font-semibold text-white no-underline">AI</a>
+  </div>
 
     <footer id="footer" class="font-figtree">
       <div class="bg-dark-blue text-white py-[50px]">
@@ -1360,7 +1336,6 @@
           </div>
       </div>
     </footer>
-  </div>
 
   <script>
 
