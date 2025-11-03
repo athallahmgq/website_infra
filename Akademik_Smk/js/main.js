@@ -1,4 +1,5 @@
-const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+
+      const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
 const mobileMenu = document.getElementById('mobile-menu');
 const mobileLinks = document.querySelectorAll('.mobile-link');
 
@@ -498,3 +499,4 @@ allPopupCards.forEach(card => {
     event.stopPropagation(); // Prevents the click from reaching the backdrop
   });
 });  
+

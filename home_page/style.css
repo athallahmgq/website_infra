@@ -1,35 +1,11 @@
 
+
     body{
       cursor: none;
     }
 
 
-.btn-AI {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  z-index: 99;
-  font-size: 23px;
-  outline: none;
-  background-color: #da4109;
-  padding: 17px 23px;
-  animation: fadeInUp 0.7s ease-in;
-  transition: all 0.5s;
-  cursor: pointer;
-  border-radius: 50%;
-}
 
-.btn-AI:hover {
-  background-color: #2b8d74;
-  bottom: 30px;
-  box-shadow: 0 0 20px 3px #7dfadb;
-}
-
-.btn-AI a {
-  text-decoration: none;
-  font-weight: 600;
-  color: white;
-}
 
     /* Custom Cursor */
     .custom-cursor {

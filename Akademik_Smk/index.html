@@ -3,99 +3,69 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>page-d844eb20-0121-4a35-92f4-ec338ead04f0</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Akademik SMK IDN Boarding School</title>
     <link rel="stylesheet" href="../style.css" />
-    <!-- <script src="../script.js"></script> -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Poppins:wght@300;600;700&display=swap" rel="stylesheet" />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              poppins: ["Poppins", "sans-serif"],
-              figtree: ["Figtree", "sans-serif"],
-            },
-            colors: {
-              "brand-blue-dark": "#0e2464",
-              "brand-blue": "#1c4cd0",
-              "brand-blue-light": "#5879ff",
-              "brand-blue-gradient-from": "#0126b9",
-              "brand-blue-gradient-to": "#5879ff",
-              "brand-yellow": "#f59e0b",
-              "brand-gray-light": "#d5d7da",
-              "brand-gray-dark": "#181d27",
-              "brand-gray-medium": "#717680",
-              "brand-gray-border": "#e9eaeb",
-              "brand-gray-footer": "#535353",
-            },
-          },
-        },
-      };
-    </script>
   </head>
   <body>
 
+    <script src="js/tailwindcss.js"></script>
     <div class="custom-cursor"></div>
   <div class="cursor-follower"></div>
 
     <!-- Header Section -->
-   <div class="w-full mx-auto relative">
-    <header class="main-header bg-dark-blue h-[90px] flex items-center sticky top-0 z-50 w-full transition-shadow duration-300 ease-in-out px-5 md:px-10 lg:px-[110px]">
+<header class="main-header bg-brand-blue-dark h-[90px] flex items-center sticky top-0 z-50 w-full transition-shadow duration-300 ease-in-out px-5 md:px-10 lg:px-[110px]">
       <div class="flex justify-between items-center w-full max-w-[1220px] mx-auto">
-        <a href="#" class="logo">
-          <img src="images/logo_idn.png" alt="IDN Boarding School Logo" class="h-[50px] transition-transform duration-300 ease-in-out hover:scale-110">
+        <a href="index.html" class="logo">
+          <img src="../images/logo_idn.png" alt="IDN Boarding School Logo" class="h-[50px] transition-transform duration-300 ease-in-out hover:scale-110">
         </a>
         <nav class="main-nav hidden lg:flex items-center gap-4">
-  <a href="../index.html" class="text-white text-lg font-bold flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative hover:bg-white/10 hover:-translate-y-0.5">Beranda</a>
-  <a href="../ppdb.html" class="text-white text-lg font-normal flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative hover:bg-white/10 hover:-translate-y-0.5">PPDB</a>
-  
-  <div class="relative group">
-    <a href="#" class="text-white text-lg font-normal flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative hover:bg-white/10 hover:-translate-y-0.5">
-      Kurikulum 
-      <img src="images/I8931_31074_8931_30754_8039_20104.svg" alt="dropdown" class="w-6 h-6 transition-transform duration-300 ease-in-out group-hover:rotate-180">
-    </a>
-    <div class="dropdown-menu absolute top-full mt-2 w-48 bg-dark-blue rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0">
-      <a href="../kurikulumsmp.html" class="block px-5 py-3 text-white hover:bg-primary-blue rounded-t-lg">SMP</a>
-      <a href="../Akademik_Smk/index.html" class="block px-5 py-3 text-white hover:bg-primary-blue rounded-b-lg">SMK</a>
-    </div>
-  </div>
+          <a href="../index.html" class="text-white text-lg font-normal flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative hover:bg-white/10 hover:-translate-y-0.5">Beranda</a>
+          <a href="index.html#registration" class="text-white text-lg font-normal flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative hover:bg-white/10 hover:-translate-y-0.5">PPDB</a>
+        
+          <div class="relative group">
+            <a href="#" class="text-white text-lg font-bold flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative hover:bg-white/10 hover:-translate-y-0.5">
+              Kurikulum 
+              <img src="../images/I8931_31074_8931_30754_8039_20104.svg" alt="dropdown" class="w-6 h-6 transition-transform duration-300 ease-in-out group-hover:rotate-180">
+            </a>
+            <div class="dropdown-menu absolute top-full mt-2 w-48 bg-brand-blue-dark rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0">
+              <a href="../Akademik_Smp/kurikulumsmp.html" class="block px-5 py-3 text-white hover:bg-brand-blue-light rounded-t-lg">SMP</a>
+              <a href="#" class="block px-5 py-3 text-white font-bold hover:bg-brand-blue-light rounded-b-lg">SMK</a>
+            </div>
+          </div>
 
-  <div class="relative group">
-    <a href="../program/index.html" class="text-white text-lg font-normal flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative hover:bg-white/10 hover:-translate-y-0.5">
-      Program 
-      <img src="images/I8931_31074_8931_30755_8039_20104.svg" alt="dropdown" class="w-6 h-6 transition-transform duration-300 ease-in-out group-hover:rotate-180">
-    </a>
-    <div class="dropdown-menu absolute top-full mt-2 w-56 bg-dark-blue rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0">
-      <a href="#" class="block px-5 py-3 text-white hover:bg-primary-blue rounded-t-lg">Backpacker</a>
-      <a href="#" class="block px-5 py-3 text-white hover:bg-primary-blue">Ekstrakurikuler</a>
-      <a href="#" class="block px-5 py-3 text-white hover:bg-primary-blue">Internasional</a>
-      <a href="#" class="block px-5 py-3 text-white hover:bg-primary-blue">IDN Mengajar</a>
-      <a href="#" class="block px-5 py-3 text-white hover:bg-primary-blue">Live In</a>
-      <a href="#" class="block px-5 py-3 text-white hover:bg-primary-blue">Business Survival</a>
-      <a href="#" class="block px-5 py-3 text-white hover:bg-primary-blue">Edurace</a>
-      <a href="#" class="block px-5 py-3 text-white hover:bg-primary-blue">IDN Bersyukur</a>
-      <a href="#" class="block px-5 py-3 text-white hover:bg-primary-blue">LDKS</a>
-      <a href="#" class="block px-5 py-3 text-white hover:bg-primary-blue rounded-b-lg">IT Camp</a>
-    </div>
-  </div>
+          <div class="relative group">
+            <a href="#" class="text-white text-lg font-normal flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative hover:bg-white/10 hover:-translate-y-0.5">
+              Program 
+              <img src="../images/I8931_31074_8931_30754_8039_20104.svg" alt="dropdown" class="w-6 h-6 transition-transform duration-300 ease-in-out group-hover:rotate-180">
+            </a>
+            <div class="dropdown-menu absolute top-full mt-2 w-56 bg-brand-blue-dark rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0">
+              <a href="#" class="block px-5 py-3 text-white hover:bg-brand-blue-light rounded-t-lg">Backpacker</a>
+              <a href="#" class="block px-5 py-3 text-white hover:bg-brand-blue-light">Ekstrakurikuler</a>
+              <a href="#" class="block px-5 py-3 text-white hover:bg-brand-blue-light">Internasional</a>
+              <a href="#" class="block px-5 py-3 text-white hover:bg-brand-blue-light">IDN Mengajar</a>
+              <a href="#" class="block px-5 py-3 text-white hover:bg-brand-blue-light">Live In</a>
+              <a href="#" class="block px-5 py-3 text-white hover:bg-brand-blue-light">Business Survival</a>
+              <a href="#" class="block px-5 py-3 text-white hover:bg-brand-blue-light">Edurace</a>
+              <a href="#" class="block px-5 py-3 text-white hover:bg-brand-blue-light">IDN Bersyukur</a>
+              <a href="#" class="block px-5 py-3 text-white hover:bg-brand-blue-light">LDKS</a>
+              <a href="#" class="block px-5 py-3 text-white hover:bg-brand-blue-light rounded-b-lg">IT Camp</a>
+            </div>
+          </div>
 
-  <a href="../artikel/index.html" class="text-white text-lg font-normal flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative hover:bg-white/10 hover:-translate-y-0.5">Artikel</a>
-  <a href="https://api.whatsapp.com/send?phone=6282116653328" target="_blank" class="text-white text-lg font-normal flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative hover:bg-white/10 hover:-translate-y-0.5">Kontak</a>
-</nav>
-<button class="mobile-nav-toggle block lg:hidden bg-none border-none cursor-pointer z-50">
-  <span class="block w-[25px] h-[3px] bg-white my-[5px]"></span>
-  <span class="block w-[25px] h-[3px] bg-white my-[5px]"></span>
-  <span class="block w-[25px] h-[3px] bg-white my-[5px]"></span>
-</button>
+          <a href="../artikel/index.html" class="text-white text-lg flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative hover:bg-white/10 hover:-translate-y-0.5">Artikel</a>
+          <a href="https://api.whatsapp.com/send?phone=6282116653328" target="_blank" class="text-white text-lg font-normal flex items-center gap-2 py-3 px-3.5 rounded-lg transition-all duration-300 ease-in-out relative hover:bg-white/10 hover:-translate-y-0.5">Kontak</a>
+        </nav>
+        <button class="mobile-nav-toggle block lg:hidden bg-none border-none cursor-pointer z-50">
+          <span class="block w-[25px] h-[3px] bg-white my-[5px]"></span>
+          <span class="block w-[25px] h-[3px] bg-white my-[5px]"></span>
+          <span class="block w-[25px] h-[3px] bg-white my-[5px]"></span>
+        </button>
       </div>
-    </header>
-  </div>
+  </header>
 
     <div id="mobile-menu" class="fixed top-0 left-0 w-full h-full bg-dark-blue/95 backdrop-blur-sm z-40 flex items-center justify-center opacity-0 invisible transition-all duration-500 -translate-x-full">
     <nav class="flex flex-col items-center gap-8 text-center">
@@ -112,7 +82,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
         <div class="flex flex-row lg:flex-row items-center gap-12 py-16">
           <!-- Image Column -->
-          <div class="w-full lg:w-1/2 h-96 lg:h-auto">
+          <div class="w-full lg:w-1/2 h-96 lg:h-auto sm:hidden lg:block">
             <img src="./assets//585005e86baba785cb8c0b8a5d5eb573768d8aa1.png" alt="Student with laptop" class="absolute bottom-0 left-40 h-[560px] w-auto z-10" />
             <img src="./assets//681da80fb99b98c13da4ff3183d0d8c4a1a90af6.png" alt="Student with trophy" class="absolute bottom-0 left-20 h-[600px] w-auto" />
           </div>
@@ -140,7 +110,7 @@
 
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-y-20 lg:gap-y-32">
         <!-- DKV Curriculum -->
-        <div class="w-full flex flex-col items-center gap-12">
+        <div id="dkv-page" class="w-full flex flex-col items-center gap-12">
           <div class="bg-brand-blue rounded-lg shadow-lg flex items-center gap-3 px-6 py-2">
             <img src="./assets//9116_2355.svg" class="h-8 w-8" alt="DKV icon" />
             <h2 class="text-white font-figtree font-semibold text-3xl">Kurikulum DKV</h2>
@@ -321,7 +291,7 @@
           </div>
         </div>
         <!-- TKJ Curriculum -->
-        <div class="w-full flex flex-col items-center gap-12">
+        <div id="dkv-tkj" class="w-full flex flex-col items-center gap-12">
           <div class="bg-brand-blue rounded-lg shadow-lg flex items-center gap-3 px-6 py-2">
             <img src="./assets//9116_2364.svg" class="h-8 w-8" alt="TKJ icon" />
             <h2 class="text-white font-figtree font-semibold text-3xl">Kurikulum TKJ</h2>
@@ -468,7 +438,7 @@
           </div>
         </div>
         <!-- RPL Curriculum -->
-        <div class="w-full flex flex-col items-center gap-12">
+        <div id="dkv-rpl" class="w-full flex flex-col items-center gap-12">
           <div class="bg-brand-blue rounded-lg shadow-lg flex items-center gap-3 px-6 py-2">
             <img src="./assets//9116_2360.svg" class="h-8 w-8" alt="RPL icon" />
             <h2 class="text-white font-figtree font-semibold text-3xl">Kurikulum RPL</h2>
@@ -943,21 +913,31 @@
     <section id="section-location" class="bg-gradient-to-r from-[#0025ba] to-brand-blue-light py-24">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-12">
         <h2 class="text-white font-figtree font-bold text-3xl text-center">Lokasi IDN Boarding School</h2>
-        <img src="./assets//f170e40ae0fa1d3aa60ebde43db4ddf07490887b.png" class="w-full h-auto rounded-2xl shadow-2xl" alt="Map location of IDN Boarding School" />
+        <div class="w-full rounded-lg overflow-hidden shadow-[0_4px_15px_rgba(0,0,0,0.2)] animate-on-scroll">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3964.293393537463!2d106.99436331477047!3d-6.484928995309327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69bdf753555555%3A0x8383b42ab35443d3!2sIDN%20Boarding%20School%20Jonggol!5e0!3m2!1sen!2sid!4v1669882255883!5m2!1sen!2sid"
+              width="100%"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
       </div>
     </section>
     <!-- Footer Section -->
 <footer id="footer" class="font-figtree">
-      <div class="bg-dark-blue text-white py-[50px]">
+      <div class="bg-brand-blue-dark text-white py-[50px]">
           <div class="container w-full max-w-[1220px] mx-auto px-5 box-border flex flex-col lg:flex-row justify-between gap-[60px]">
               <div class="max-w-[360px] flex flex-col gap-[30px] items-start animate-slide-left">
-                  <img src="images/logo_idn.png" alt="IDN Boarding School Logo" class="h-[81px] transition-transform duration-300 ease-in-out hover:scale-110">
+                  <img src="../images/logo_idn.png" alt="IDN Boarding School Logo" class="h-[81px] transition-transform duration-300 ease-in-out hover:scale-110">
                   <p class="text-base leading-6 font-medium">lembaga pendidikan berbasis IT yang memandang pendidikan sebagai investasi terbaik dalam kehidupan manusia, karena melalui pendidikan, kita dapat membangun karakter dan peradaban yang lebih maju.</p>
                   <div class="flex gap-6">
-                      <a href="https://www.instagram.com/idnboardingschool/" target="_blank" class="transition-transform duration-300 ease-in-out hover:-translate-y-1"><img src="images/8836_1040.svg" alt="Instagram" class="w-[30px] h-[30px]"></a>
-                      <a href="https://api.whatsapp.com/send?phone=6281216653328" target="_blank" class="transition-transform duration-300 ease-in-out hover:-translate-y-1"><img src="images/8836_1041.svg" alt="WhatsApp" class="w-[30px] h-[30px]"></a>
-                      <a href="https://www.facebook.com/idnboardingschool/?locale=id_ID" target="_blank" class="transition-transform duration-300 ease-in-out hover:-translate-y-1"><img src="images/8836_1042.svg" alt="Facebook" class="w-[30px] h-[30px]"></a>
-                      <a href="https://www.youtube.com/@IDNTV2022" class="transition-transform duration-300 ease-in-out hover:-translate-y-1"><img src="images/8836_1043.svg" alt="YouTube" class="w-[30px] h-[30px]"></a>
+                      <a href="https://www.instagram.com/idnboardingschool/" target="_blank" class="transition-transform duration-300 ease-in-out hover:-translate-y-1"><img src="../images/8836_1040.svg" alt="Instagram" class="w-[30px] h-[30px]"></a>
+                      <a href="https://api.whatsapp.com/send?phone=6281216653328" target="_blank" class="transition-transform duration-300 ease-in-out hover:-translate-y-1"><img src="../images/8836_1041.svg" alt="WhatsApp" class="w-[30px] h-[30px]"></a>
+                      <a href="https://www.facebook.com/idnboardingschool/?locale=id_ID" target="_blank" class="transition-transform duration-300 ease-in-out hover:-translate-y-1"><img src="../images/8836_1042.svg" alt="Facebook" class="w-[30px] h-[30px]"></a>
+                      <a href="https://www.youtube.com/@IDNTV2022" class="transition-transform duration-300 ease-in-out hover:-translate-y-1"><img src="../images/8836_1043.svg" alt="YouTube" class="w-[30px] h-[30px]"></a>
                   </div>
               </div>
               <div class="footer-links flex flex-col md:flex-row gap-[30px] md:gap-[60px] animate-slide-right">
@@ -988,518 +968,15 @@
           <div class="container w-full max-w-[1220px] mx-auto px-5 box-border flex flex-col md:flex-row justify-between items-center gap-5">
               <p class="font-poppins text-sm text-[#535353] font-light">© Copyright 2025 - <strong class="font-semibold text-blue-500">IDN Boarding School</strong></p>
               <div class="flex items-center gap-4">
-                  <img src="images/016698a76ad9a32430b855f5b14e67f975aa7f1d.png" alt="Partner Logo 1" class="h-[41px] object-contain">
-                  <img src="images/ff4dd3f58988e9c84b9bb141610e22b15ccd7517.png" alt="Partner Logo 2" class="h-[41px] object-contain">
-                  <img src="images/7aa61f391f8a3e5ee44b96311384f438a35fda38.png" alt="Partner Logo 3" class="h-[41px] object-contain">
-                  <img src="images/afa19fa50240996d441fda41861cd78ab62d92c7.png" alt="Partner Logo 4" class="h-[41px] object-contain">
+                  <img src="../images/016698a76ad9a32430b855f5b14e67f975aa7f1d.png" alt="Partner Logo 1" class="h-[41px] object-contain">
+                  <img src="../images/ff4dd3f58988e9c84b9bb141610e22b15ccd7517.png" alt="Partner Logo 2" class="h-[41px] object-contain">
+                  <img src="../images/7aa61f391f8a3e5ee44b96311384f438a35fda38.png" alt="Partner Logo 3" class="h-[41px] object-contain">
+                  <img src="../images/afa19fa50240996d441fda41861cd78ab62d92c7.png" alt="Partner Logo 4" class="h-[41px] object-contain">
               </div>
           </div>
       </div>
     </footer>
 
-
-    <script>
-      const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
-const mobileMenu = document.getElementById('mobile-menu');
-const mobileLinks = document.querySelectorAll('.mobile-link');
-
-const toggleMenu = () => {
-  mobileNavToggle.classList.toggle('active');
-  const isMenuOpen = mobileNavToggle.classList.contains('active');
-  
-  if (isMenuOpen) {
-    // Tampilkan menu
-    mobileMenu.classList.remove('invisible', '-translate-x-full');
-    mobileMenu.classList.add('visible', 'translate-x-0', 'opacity-100');
-    document.body.style.overflow = 'hidden'; // Mencegah scroll body
-  } else {
-    // Sembunyikan menu
-    mobileMenu.classList.remove('visible', 'translate-x-0', 'opacity-100');
-    mobileMenu.classList.add('invisible', '-translate-x-full');
-    document.body.style.overflow = ''; // Mengizinkan scroll body kembali
-  }
-};
-
-mobileNavToggle.addEventListener('click', toggleMenu);
-
-// Menutup menu saat salah satu link di-klik (opsional tapi disarankan)
-mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        if (mobileNavToggle.classList.contains('active')) {
-            toggleMenu();
-        }
-    });
-});
-
-  // Custom Cursor
-  const cursorRing = document.querySelector('.custom-cursor');
-  const cursorDot = document.querySelector('.cursor-follower');
-
-  let mouseX = 0;
-  let mouseY = 0;
-  let ringX = 0;
-  let ringY = 0;
-  let dotX = 0;
-  let dotY = 0;
-  // Adjust speed values for different animation feel
-  const ringSpeed = 0.10; // Ring lags more
-  const dotSpeed = 0.7;  // Dot is more responsive
-
-  document.addEventListener('mousemove', (e) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      
-      if (!cursorRing.classList.contains('active')) {
-          cursorRing.classList.add('active');
-          cursorDot.classList.add('active');
-      }
-  });
-
-  document.addEventListener('mouseleave', () => {
-      cursorRing.classList.remove('active');
-      cursorDot.classList.remove('active');
-  });
-
-  function animateCursor() {
-      // Move ring towards mouse with a delay
-      ringX += (mouseX - ringX) * ringSpeed;
-      ringY += (mouseY - ringY) * ringSpeed;
-
-      // Move dot towards mouse faster
-      dotX += (mouseX - dotX) * dotSpeed;
-      dotY += (mouseY - dotY) * dotSpeed;
-      
-      cursorRing.style.left = ringX + 'px';
-      cursorRing.style.top = ringY + 'px';
-      
-      cursorDot.style.left = dotX + 'px';
-      cursorDot.style.top = dotY + 'px';
-      
-      requestAnimationFrame(animateCursor);
-  }
-  animateCursor();
-
-  // Click animation listeners
-  document.addEventListener('mousedown', () => {
-      cursorRing.classList.add('clicked');
-      cursorDot.classList.add('clicked');
-  });
-  document.addEventListener('mouseup', () => {
-      cursorRing.classList.remove('clicked');
-      cursorDot.classList.remove('clicked');
-  });
-
-  // Hover effect listeners
-  const hoverElements = document.querySelectorAll('a, button, .btn, .major-card, .project-card, .achievement-card, .branch-card, .logo-box, .logo');
-  hoverElements.forEach(el => {
-      el.addEventListener('mouseenter', () => cursorRing.classList.add('hover'));
-      el.addEventListener('mouseleave', () => cursorRing.classList.remove('hover'));
-  });
-
-  // Parallax Effect
-  const parallaxElements = document.querySelectorAll('.parallax-element');
-  document.addEventListener('mousemove', (e) => {
-    const mouseXPercent = (e.clientX / window.innerWidth - 0.5) * 2;
-    const mouseYPercent = (e.clientY / window.innerHeight - 0.5) * 2;
-    parallaxElements.forEach(el => {
-      const speed = el.dataset.speed || 0.5;
-      const x = mouseXPercent * 50 * speed;
-      const y = mouseYPercent * 50 * speed;
-      el.style.transform = `translate(${x}px, ${y}px)`;
-    });
-  });
-
-  // Scroll Animations
-  const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -100px 0px' };
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animated');
-      }
-    });
-  }, observerOptions);
-  const animatedElements = document.querySelectorAll('.animate-on-scroll, .animate-fade-in, .animate-slide-left, .animate-slide-right, .animate-scale');
-  animatedElements.forEach(el => observer.observe(el));
-
-  // Header scroll effect
-  const header = document.querySelector('.main-header');
-  window.addEventListener('scroll', () => {
-    window.pageYOffset > 50 ? header.classList.add('scrolled') : header.classList.remove('scrolled');
-  });
-
-  // Filter buttons logic
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterButtons.forEach(b => {
-        b.classList.remove('active', 'bg-primary-blue', 'text-white', 'font-bold');
-        b.classList.add('bg-transparent', 'text-text-gray');
-      });
-      btn.classList.add('active', 'bg-primary-blue', 'text-white', 'font-bold');
-      btn.classList.remove('bg-transparent', 'text-text-gray');
-    });
-  });
-  
-  // Stagger animation (using CSS transition-delay for simplicity)
-  const addStaggerAnimation = (selector, delay = 100) => {
-    document.querySelectorAll(selector).forEach((item, index) => {
-      item.style.transitionDelay = `${index * delay}ms`;
-    });
-  };
-  addStaggerAnimation('.major-card', 150);
-  addStaggerAnimation('.project-card', 150);
-  addStaggerAnimation('.achievement-card', 150);
-  addStaggerAnimation('.branch-card', 100);
-  addStaggerAnimation('.logo-box', 50);
-
-  const branchCards = document.querySelectorAll('.branch-card');
-
-branchCards.forEach(card => {
-    const cardImage = card.querySelector('img');
-
-    card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-
-        // Calculate rotation based on mouse position
-        const rotateX = ((y - centerY) / centerY) * -10; // Max 10deg tilt
-        const rotateY = ((x - centerX) / centerX) * 10;
-
-        // Calculate translation for parallax effect
-        const moveX = ((x - centerX) / centerX) * 20; // Max 20px movement
-        const moveY = ((y - centerY) / centerY) * 20;
-
-        // Apply 3D transform to image
-        cardImage.style.transform = `
-        scale(1.1) 
-        perspective(1000px) 
-        rotateX(${rotateX}deg) 
-        rotateY(${rotateY}deg)
-        translate(${moveX}px, ${moveY}px)
-      `;
-    });
-
-    card.addEventListener('mouseleave', () => {
-        // Reset transform when mouse leaves
-        cardImage.style.transform = 'scale(1) perspective(1000px) rotateX(0) rotateY(0) translate(0, 0)';
-    });
-});
-
-  const carouselTrack = document.getElementById('carousel-track');
-  const prevBtn = document.getElementById('carousel-prev');
-  const nextBtn = document.getElementById('carousel-next');
-  const indicators = document.querySelectorAll('.carousel-indicator');
-  const slides = document.querySelectorAll('.carousel-slide');
-  let currentIndex = 0;
-  const totalSlides = 7;
-  let isAnimating = false;
-
-  function updateCarousel(direction = 'next') {
-    if (isAnimating) return;
-    isAnimating = true;
-
-    // Add animation class based on direction
-    carouselTrack.style.transition = 'transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-    
-    // Animate slides
-    slides.forEach((slide, index) => {
-      if (index === currentIndex) {
-        // Current slide fade in and scale up
-        slide.style.opacity = '1';
-        slide.style.transform = 'scale(1)';
-      } else {
-        // Other slides fade out
-        slide.style.opacity = '0.3';
-        slide.style.transform = 'scale(0.95)';
-      }
-    });
-
-    const offset = -currentIndex * 100;
-    carouselTrack.style.transform = `translateX(${offset}%)`;
-    
-    // Update indicators with animation
-    indicators.forEach((indicator, index) => {
-      indicator.style.transition = 'all 0.3s ease-in-out';
-      if (index === currentIndex) {
-        indicator.classList.remove('bg-gray-300');
-        indicator.classList.add('bg-primary-blue');
-        indicator.style.transform = 'scale(1.3)';
-        indicator.style.width = '32px';
-        indicator.style.borderRadius = '6px';
-      } else {
-        indicator.classList.remove('bg-primary-blue');
-        indicator.classList.add('bg-gray-300');
-        indicator.style.transform = 'scale(1)';
-        indicator.style.width = '12px';
-        indicator.style.borderRadius = '50%';
-      }
-    });
-
-    // Animate navigation buttons
-    if (direction === 'next') {
-      nextBtn.style.transform = 'scale(0.9) rotate(10deg)';
-      setTimeout(() => {
-        nextBtn.style.transform = 'scale(1) rotate(0deg)';
-      }, 150);
-    } else {
-      prevBtn.style.transform = 'scale(0.9) rotate(-10deg)';
-      setTimeout(() => {
-        prevBtn.style.transform = 'scale(1) rotate(0deg)';
-      }, 150);
-    }
-
-    setTimeout(() => {
-      isAnimating = false;
-    }, 800);
-  }
-
-  prevBtn.addEventListener('click', () => {
-    if (isAnimating) return;
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    updateCarousel('prev');
-  });
-
-  nextBtn.addEventListener('click', () => {
-    if (isAnimating) return;
-    currentIndex = (currentIndex + 1) % totalSlides;
-    updateCarousel('next');
-  });
-
-  // Indicator click functionality with animation
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => {
-      if (isAnimating || currentIndex === index) return;
-      const direction = index > currentIndex ? 'next' : 'prev';
-      currentIndex = index;
-      updateCarousel(direction);
-    });
-  });
-
-  // Add keyboard navigation
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') {
-      prevBtn.click();
-    } else if (e.key === 'ArrowRight') {
-      nextBtn.click();
-    }
-  });
-
-  // Add swipe support for mobile
-  let touchStartX = 0;
-  let touchEndX = 0;
-
-  carouselTrack.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-  });
-
-  carouselTrack.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-  });
-
-  function handleSwipe() {
-    if (touchEndX < touchStartX - 50) {
-      nextBtn.click();
-    }
-    if (touchEndX > touchStartX + 50) {
-      prevBtn.click();
-    }
-  }
-
-  // Initialize carousel with first slide animation
-  updateCarousel();
-
-  // Auto-play carousel (optional - uncomment to enable)
-  let autoplayInterval = setInterval(() => {
-    nextBtn.click();
-  }, 5000);
-
-  // Pause autoplay on hover (if autoplay is enabled)
-  carouselTrack.addEventListener('mouseenter', () => {
-    clearInterval(autoplayInterval);
-  });
-
-  carouselTrack.addEventListener('mouseleave', () => {
-    autoplayInterval = setInterval(() => {
-      nextBtn.click();
-    }, 5000);
-  });
-
-// --- SCRIPT PERBAIKAN UNTUK FILTER PROYEK JURUSAN ---
-
-// 1. Data untuk setiap kartu proyek (tidak ada perubahan di sini)
-const projectsData = {
-  dkv: [
-    {
-      image: 'images/76e803f72748c92743ac8e76d8c672f488b9ada0.png',
-      title: 'Web Design',
-      description: 'Craft Engaging, User Friendly Website, provide the best website for user.',
-      tags: ['Landing Page', 'School Website', 'Portfolio']
-    },
-    {
-      image: 'images/0894bad173f73a2fff816853a3f05614630e0dfc.png',
-      title: 'UI/UX Design',
-      description: 'Create Simple, User Friendly App, also with the Feature and others.',
-      tags: ['UI Design', 'UX Design', 'Prototype', 'Product Design', 'User Flow']
-    },
-    {
-      image: 'images/6d0dc842ceb4601ba70f047c1a7478ba5822bf04.png',
-      title: 'Graphic Design',
-      description: 'Make an Amazing & Beneficial Design, that is useful for user property.',
-      tags: ['UI Design', 'UX Design', 'Prototype', 'Product Design', 'User Flow']
-    }
-  ],
-  tkj: [
-    {
-      image: 'images/routing.png',
-      title: 'Routing',
-      description: 'Build your network, master digital connections with Cisco certification.',
-      tags: ['Topology', 'Cisco', 'Packet Tracer']
-    },
-    {
-      image: 'images/tkj_certification.png',
-      title: 'Certification',
-      description: 'Master modern networking technology and earn an international certification.',
-      tags: ['Networking', 'Experience', 'Certification', 'Cisco', 'Knowledge']
-    },
-    {
-      image: 'images/switching.png',
-      title: 'Switching',
-      description: 'Strong routing, fast switching — your future stays connected.',
-      tags: ['Data', 'Layer', 'Packet', 'Switch', 'Hardware']
-    }
-  ],
-  rpl: [
-    {
-      image: 'images/web_dev.png',
-      title: 'Website Dev',
-      description: 'Developing Website using the HTML, CSS & JavaScript Language.',
-      tags: ['Landing Page', 'Dashboard', 'Absention Website']
-    },
-    {
-      image: 'images/mobile_app.png',
-      title: 'Mobile Application',
-      description: 'Develop cross-platform mobile apps with beautiful UI and smooth performance.',
-      tags: ['Mobile', 'Application', 'Printing App', 'E-Commerce', 'Shop']
-    },
-    {
-      image: 'images/rpl_certification.png',
-      title: 'Certification',
-      description: 'Create complete solutions from frontend to backend with modern frameworks.',
-      tags: ['Course', 'Certification', 'Code', 'Knowledge', 'Experience']
-    }
-  ]
-};
-
-// 2. Fungsi untuk menampilkan kartu proyek berdasarkan kategori (Dengan Perbaikan)
-function renderProjects(category) {
-  const container = document.getElementById('projects-container');
-  if (!container) return; 
-
-  const projects = projectsData[category];
-  
-  container.style.opacity = '0';
-  container.style.transform = 'translateY(20px)';
-  
-  setTimeout(() => {
-    container.innerHTML = projects.map(project => `
-      <div class="project-card bg-white rounded-2xl shadow-[0px_4px_25px_0px_rgba(0,0,0,0.15)] overflow-hidden p-2 flex flex-col gap-2 transition-all duration-300 ease-in-out hover:-translate-y-2.5 hover:shadow-[0px_15px_40px_rgba(0,0,0,0.25)] group">
-        <div class="overflow-hidden rounded-lg">
-          <img src="${project.image}" alt="${project.title}" class="w-full h-[200px] object-cover rounded-lg transition-transform duration-500 ease-in-out group-hover:scale-110">
-        </div>
-        
-        <div class="p-4 rounded-lg flex flex-col gap-4 flex-grow" style="background-color: #f0f0f0;">
-          <h3 class="text-3xl font-semibold leading-10 text-text-dark">${project.title}</h3>
-          
-          <p class="text-base font-medium leading-6 text-text-gray">${project.description}</p>
-          
-          <div class="flex flex-wrap gap-2 mt-auto">
-            ${project.tags.map(tag => `<span class="bg-white text-text-gray text-sm py-1.5 px-2.5 rounded-full transition-all duration-300 ease-in-out hover:bg-primary-blue hover:text-white hover:scale-110">${tag}</span>`).join('')}
-          </div>
-        </div>
-      </div>
-    `).join('');
-    
-    setTimeout(() => {
-      container.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-      container.style.opacity = '1';
-      container.style.transform = 'translateY(0)';
-    }, 50);
-
-  }, 300);
-}
-
-// 3. Logika untuk tombol filter (tidak ada perubahan di sini)
-const projectFilterButtons = document.querySelectorAll('.project-filter-btn');
-
-// Add a click event listener to each button
-projectFilterButtons.forEach(btn => {
-  btn.addEventListener('click', () => {
-    const category = btn.dataset.category;
-    
-    projectFilterButtons.forEach(b => {
-      b.classList.remove('bg-primary-blue', 'text-white', 'font-bold');
-      b.classList.add('bg-transparent', 'text-text-gray');
-    });
-    
-    btn.classList.add('bg-primary-blue', 'text-white', 'font-bold');
-    btn.classList.remove('bg-transparent', 'text-text-gray');
-    
-    renderProjects(category);
-  });
-});
-
-// 4. Panggilan Awal (tidak ada perubahan di sini)
-document.addEventListener('DOMContentLoaded', () => {
-  renderProjects('dkv');
-});
-
-const branchPopupBackdrop = document.getElementById('branch-popup-backdrop');
-const allPopupCards = branchPopupBackdrop.querySelectorAll('.flex-col[id^="Popup-"]'); // Selects all popup cards
-
-/**
- * Shows a specific popup by its ID and displays the backdrop.
- * @param {string} popupId The ID of the popup element to show (e.g., 'Popup-jonggol').
- */
-function showBranchPopup(popupId) {
-  // First, hide all popups to ensure a clean state
-  allPopupCards.forEach(card => {
-    card.classList.add('hidden');
-    card.classList.remove('flex');
-  });
-
-  // Find the specific popup card the user wants to see
-  const targetPopup = document.getElementById(popupId);
-
-  // If the target exists, show it and the backdrop
-  if (targetPopup) {
-    targetPopup.classList.remove('hidden');
-    targetPopup.classList.add('flex');
-    branchPopupBackdrop.classList.remove('hidden');
-  }
-}
-
-/**
- * Hides the backdrop and all popup cards.
- */
-function closeBranchPopups() {
-  branchPopupBackdrop.classList.add('hidden');
-}
-
-// Add an event listener to the backdrop to close it when clicked
-branchPopupBackdrop.addEventListener('click', closeBranchPopups);
-
-// Add an event listener to each card to prevent closing when the card itself is clicked
-allPopupCards.forEach(card => {
-  card.addEventListener('click', function (event) {
-    event.stopPropagation(); // Prevents the click from reaching the backdrop
-  });
-});  
-
-    </script>
+    <script src="js/main.js"></script>
   </body>
 </html>
